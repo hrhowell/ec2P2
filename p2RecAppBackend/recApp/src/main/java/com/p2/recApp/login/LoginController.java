@@ -24,6 +24,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 //@RequestMapping("/api")
 @CrossOrigin("*")
 public class LoginController {
+	public static String userPassword = " ";
 	@Autowired
 	private UserService userService;
 //	private PostRepository postRepository;
@@ -56,6 +57,7 @@ public class LoginController {
 		String name = user.getFirstname();
 		
 		System.out.println(" username ***********: "+ user);
+		userPassword = user.getPassword();
 		
 		if(user.getPassword().equals(password)) {
 			UserRole role = user.getUserRole();
@@ -70,13 +72,6 @@ public class LoginController {
 			return "no";		
 		}
 		
-		
-//		if(user.getPassword().equals(password)) {
-//			return "ok";
-//		}else {
-//			return "no";		
-//		}
-//		
 	}
 
 	

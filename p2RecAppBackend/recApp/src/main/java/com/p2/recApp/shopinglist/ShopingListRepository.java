@@ -14,5 +14,6 @@ import com.p2.recApp.recipes.Recipe;
 @Transactional()
 public interface ShopingListRepository extends JpaRepository<ShopingList, Integer> {
 	List<ShopingList> findByUsername(String username); 
+	void deleteByUsername(String username);
 		
 }
