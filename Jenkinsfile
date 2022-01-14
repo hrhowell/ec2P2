@@ -5,11 +5,9 @@ pipeline {
     stage('Checkout') {
       steps {
         // Get some code from a GitHub repository
-<<<<<<< HEAD
-        git branch: "newVersion", url: 'https://github.com/hrhowell/ec2P2.git'
-=======
+
         git branch: "main", url: 'https://github.com/hrhowell/ec2P2.git'
->>>>>>> 5f279ef36273302d738d10e7da193d2df6b7230c
+
 	
       }
     }
@@ -36,8 +34,5 @@ pipeline {
       }
         }
   }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 5f279ef36273302d738d10e7da193d2df6b7230c
+
